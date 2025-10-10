@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ramakanth Gajula | Portfolio</title>
+
+  <!-- ✅ Font Awesome for GitHub & Link icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 2rem;
+      flex-wrap: wrap;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+    }
+    .header-text h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .header-text p {
+      margin: 0.3rem 0 0;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    .header-buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.5rem;
+    }
+
+    nav {
+      background: #0f172a;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      flex-wrap: wrap;
+      transition: background 0.3s;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      color: #1e293b;
+      border-left: 5px solid #3b82f6;
+      padding-left: 0.5rem;
+      transition: color 0.3s;
+    }
+    body.dark-mode section h2 {
+      color: #93c5fd;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s, background 0.3s, color 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
+    body.dark-mode .card {
+      background: #1e293b;
+      color: #e5e7eb;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #0f172a;
+      transition: color 0.3s;
+    }
+    body.dark-mode .card h3 {
+      color: #bfdbfe;
+    }
+
+    /* ✅ GitHub Icon Styling */
+    .icon-link {
+      display: inline-block;
+      font-size: 1.6rem;
+      color: #0f172a;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      transition: color 0.3s ease, transform 0.2s ease;
+    }
+    .icon-link:hover {
+      color: #3b82f6;
+      transform: scale(1.1);
+    }
+    body.dark-mode .icon-link {
+      color: #e5e7eb;
+    }
+    body.dark-mode .icon-link:hover {
+      color: #93c5fd;
+    }
+
+    /* ✅ Certification Link Icon Styling */
+    .cert-link {
+      color: #3b82f6;
+      margin-left: 8px;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .cert-link:hover {
+      color: #2563eb;
+    }
+    body.dark-mode .cert-link {
+      color: #93c5fd;
+    }
+    body.dark-mode .cert-link:hover {
+      color: #60a5fa;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .skill-box {
+      background: white;
+      padding: 1.2rem;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+      transition: background 0.3s, color 0.3s;
+    }
+    .skill-box:hover {
+      background: #3b82f6;
+      color: white;
+    }
+    body.dark-mode .skill-box {
+      background: #1e293b;
+      color: #e5e7eb;
+    }
+
+    footer {
+      text-align: center;
+      background: #1e293b;
+      color: white;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .download-btn, .toggle-btn {
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      background: #3b82f6;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .download-btn:hover, .toggle-btn:hover {
+      background: #2563eb;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <img src="c:\Users\grama\OneDrive\Documents\CERTIFICATES\RK_photo.jpeg" alt="Profile Photo">
+    <div class="header-text">
+      <h1>Ramakanth Gajula</h1>
+      <p>Apiring Data Analytics | MGIT'25</p>
+    </div>
+  </div>
+  <div class="header-buttons">
+    <a class="download-btn" href="https://drive.google.com/file/d/1SreJ_X5MTiWSBZHlZo2JIS01h3m1zcXo/view?usp=sharing" download>📄 Download CV</a>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+  </div>
+</header>
+
+<nav>
+  <a href="#about">About</a>
+  <a href="#projects">Projects</a>
+  <a href="#skills">Skills</a>
+  <a href="#certifications">Certifications</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    Hi, I’m <b>G Ramakanth</b>, a motivated and detail-oriented ECE graduate with strong foundations in 
+    <b>Python, SQL, Excel, and Power BI</b>, and hands-on experience in data analytics, dashboarding, and machine learning projects.
+    Adept at turning raw data into actionable insights and developing efficient solutions. 
+    Eager to contribute to dynamic tech teams and grow through practical, problem-solving experience. 
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-box">Python, SQL, C</div>
+    <div class="skill-box">Power BI, Excel</div>
+    <div class="skill-box">TensorFlow, CNN, OpenCV</div>
+    <div class="skill-box">HTML, CSS, JavaScript</div>
+    <div class="skill-box">ESP32, Arduino, Raspberry Pi</div>
+    <div class="skill-box">Git, Octave, MATLAB</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Power BI Business Dashboards</h3>
+      <p>Built interactive dashboards for sales & KPI tracking, improving reporting speed by <b>40%</b>.</p>
+      <p><b>Tech:</b> Power BI, Excel</p>
+      <a href="https://github.com/Gramakanth11/PowerBI-Business-Dashboards" target="_blank" class="icon-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Smart Assistance for Speech-Disabled</h3>
+      <p>Developed a CNN-based gesture recognition glove achieving <b>92% accuracy</b> for gesture-to-speech translation.</p>
+      <p><b>Tech:</b> Python, CNN, TensorFlow</p>
+      <a href="https://github.com/Gramakanth11/Smart-assistance-for-deaf-and-dumb" target="_blank" class="icon-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>ESP32 Motion Detection System</h3>
+      <p>Created real-time motion detection alerts with PIR sensors & ESP32, reducing detection latency by <b>30%</b>.</p>
+      <p><b>Tech:</b> C, ESP32, HTML</p>
+      <a href="https://github.com/Gramakanth11/Esp32-RTC-based-motion-detection-using-PIR-sensor" target="_blank" class="icon-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Hotel Website Interface</h3>
+      <p>Developed a responsive hotel booking site reducing navigation steps by <b>25%</b>.</p>
+      <p><b>Tech:</b> HTML, CSS, JavaScript</p>
+      <a href="https://github.com/Gramakanth11/Hotel-Website" target="_blank" class="icon-link">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section id="certifications">
+  <h2>Certifications</h2>
+  <ul>
+    <li>
+      MySQL Heatwave Implementation Certified Associate|ORACLE
+      <a href="https://drive.google.com/file/d/1p6n16Nr-eYfY5NMDLRnA3wpBwyoG74-0/view?usp=sharing" target="_blank" class="cert-link">
+        <i class="fa-solid fa-link"></i>
+      </a>
+    </li>
+
+    <li>
+      Generative AI Professional|ORACLE 
+      <a href="https://drive.google.com/file/d/1-4E8s-s-MFYztvJj6dFYds8QGTS5vXSH/view?usp=sharing" target="_blank" class="cert-link">
+        <i class="fa-solid fa-link"></i>
+      </a>
+    </li>
+
+    <li>
+      Data Analysis with Python|IBM 
+      <a href="https://drive.google.com/file/d/1u3ETowaXyRILwqobUcSpMl9UX6ceHXzb/view?usp=sharing" target="_blank" class="cert-link">
+        <i class="fa-solid fa-link"></i>
+      </a>
+    </li>
+
+    <li>
+      Tata Group GenAI powered Data Analytics|FORAGE
+      <a href="https://drive.google.com/file/d/1dbbdUsn2uH5295lUFLceJnSkq9Zbr25u/view?usp=drive_link" target="_blank" class="cert-link">
+        <i class="fa-solid fa-link"></i>
+      </a>
+    </li>
+
+    <li>
+      Data Analytics with Generative AI|SKILL UP
+      <a href="https://drive.google.com/file/d/1SyRDWENKGcWNzJ-P0TYJsXhzP5_K2Cme/view?usp=sharing" target="_blank" class="cert-link">
+        <i class="fa-solid fa-link"></i>
+      </a>
+    </li>
+
+    <li>
+      Power BI Workshop|SKILL NATION 
+      <a href="https://drive.google.com/file/d/161F-iItIYxl_NOvKXQ7wFpLckCV6govo/view?usp=sharing" target="_blank" class="cert-link">
+        <i class="fa-solid fa-link"></i>
+      </a>
+    </li>
+
+    <li>
+      Web Development – Plasmid (2024)
+      <a href="https://drive.google.com/file/d/1YCwjByNAvRBoR1qQa9YfkaA1jIKjgNDK/view?usp=sharing" target="_blank" class="cert-link">
+        <i class="fa-solid fa-link"></i>
+      </a>
+    </li>
+  </ul>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:ramakanthgajula11@gmail.com">ramakanthgajula11@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/Gramakanth11" target="_blank">github.com/Gramakanth11</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/ramakanth-gajula" target="_blank">linkedin.com/in/ramakanth-gajula</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Ramakanth Gajula | Portfolio</p>
+</footer>
+
+<script>
+  function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+  }
+</script>
+
+</body>
+</html>
