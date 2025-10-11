@@ -8,6 +8,12 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
+    
+    html {
+      scroll-behavior: smooth;
+    }
+
+    
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -22,8 +28,27 @@
       color: #e5e7eb;
     }
 
+    .toggle-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+      background: #fff;
+      color: #0f172a;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 1px;
+      font-size: 9px;
+      transition: 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
     header {
-      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      background: linear-gradient(135deg, #2a479a, #0f172a);
       color: white;
       display: flex;
       justify-content: space-between;
@@ -37,11 +62,13 @@
       gap: 1.5rem;
     }
     header img {
-      width: 120px;
-      height: 120px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       border: 3px solid #fff;
+      object-fit: cover;
     }
+
     .header-text h1 {
       margin: 0;
       font-size: 2rem;
@@ -77,6 +104,7 @@
       color: #60a5fa;
     }
 
+    
     section {
       padding: 3rem 1.5rem;
       max-width: 1100px;
@@ -185,8 +213,23 @@
       text-align: center;
       background: #1e293b;
       color: white;
-      padding: 1.5rem;
+      padding: 2rem 1rem;
       margin-top: 3rem;
+    }
+
+    footer .social-icons {
+      margin-top: 0.8rem;
+    }
+    footer .social-icons a {
+      color: white;
+      font-size: 1.5rem;
+      margin: 0 0.8rem;
+      display: inline-block;
+      transition: color 0.3s, transform 0.2s;
+    }
+    footer .social-icons a:hover {
+      color: #60a5fa;
+      transform: scale(1.1);
     }
 
     .download-btn, .toggle-btn {
@@ -210,15 +253,14 @@
 
 <header>
   <div class="header-left">
-    <img src="https://drive.google.com/file/d/1y1L0m_J3pV33_tZvGLX1ddh3OBqfqI87/view?usp=sharing" alt="Profile Photo">
+    <img src="Profile.jpeg" alt="Profile Photo">
     <div class="header-text">
       <h1>Ramakanth Gajula</h1>
-      <p>Aspiring Data Analytics | MGIT'25</p>
+      <p>Aspiring Data Analyst | MGIT'25</p>
     </div>
   </div>
   <div class="header-buttons">
-    <a class="download-btn" href="https://drive.google.com/file/d/1SreJ_X5MTiWSBZHlZo2JIS01h3m1zcXo/view?usp=sharing" download>📄 Download CV</a>
-    <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+    <button class="toggle-btn" onclick="toggleDarkMode()">🌙</button>
   </div>
 </header>
 
@@ -293,70 +335,47 @@
   </div>
 </section>
 
-
 <section id="certifications">
   <h2>Certifications</h2>
   <ul>
-    <li>
-      MySQL Heatwave Implementation Certified Associate|ORACLE
-      <a href="https://drive.google.com/file/d/1p6n16Nr-eYfY5NMDLRnA3wpBwyoG74-0/view?usp=sharing" target="_blank" class="cert-link">
-        <i class="fa-solid fa-link"></i>
-      </a>
+    <li>MySQL Heatwave Implementation Certified Associate | ORACLE
+      <a href="https://drive.google.com/file/d/1p6n16Nr-eYfY5NMDLRnA3wpBwyoG74-0/view?usp=sharing" target="_blank" class="cert-link"><i class="fa-solid fa-link"></i></a>
     </li>
-
-    <li>
-      Generative AI Professional|ORACLE 
-      <a href="https://drive.google.com/file/d/1-4E8s-s-MFYztvJj6dFYds8QGTS5vXSH/view?usp=sharing" target="_blank" class="cert-link">
-        <i class="fa-solid fa-link"></i>
-      </a>
+    <li>Generative AI Professional | ORACLE 
+      <a href="https://drive.google.com/file/d/1-4E8s-s-MFYztvJj6dFYds8QGTS5vXSH/view?usp=sharing" target="_blank" class="cert-link"><i class="fa-solid fa-link"></i></a>
     </li>
-
-    <li>
-      Data Analysis with Python|IBM 
-      <a href="https://drive.google.com/file/d/1u3ETowaXyRILwqobUcSpMl9UX6ceHXzb/view?usp=sharing" target="_blank" class="cert-link">
-        <i class="fa-solid fa-link"></i>
-      </a>
+    <li>Data Analysis with Python | IBM 
+      <a href="https://drive.google.com/file/d/1u3ETowaXyRILwqobUcSpMl9UX6ceHXzb/view?usp=sharing" target="_blank" class="cert-link"><i class="fa-solid fa-link"></i></a>
     </li>
-
-    <li>
-      Tata Group GenAI powered Data Analytics|FORAGE
-      <a href="https://drive.google.com/file/d/1dbbdUsn2uH5295lUFLceJnSkq9Zbr25u/view?usp=drive_link" target="_blank" class="cert-link">
-        <i class="fa-solid fa-link"></i>
-      </a>
+    <li>Tata Group GenAI powered Data Analytics | FORAGE
+      <a href="https://drive.google.com/file/d/1dbbdUsn2uH5295lUFLceJnSkq9Zbr25u/view?usp=drive_link" target="_blank" class="cert-link"><i class="fa-solid fa-link"></i></a>
     </li>
-
-    <li>
-      Data Analytics with Generative AI|SKILL UP
-      <a href="https://drive.google.com/file/d/1SyRDWENKGcWNzJ-P0TYJsXhzP5_K2Cme/view?usp=sharing" target="_blank" class="cert-link">
-        <i class="fa-solid fa-link"></i>
-      </a>
+    <li>Data Analytics with Generative AI | SKILL UP
+      <a href="https://drive.google.com/file/d/1SyRDWENKGcWNzJ-P0TYJsXhzP5_K2Cme/view?usp=sharing" target="_blank" class="cert-link"><i class="fa-solid fa-link"></i></a>
     </li>
-
-    <li>
-      Power BI Workshop|SKILL NATION 
-      <a href="https://drive.google.com/file/d/161F-iItIYxl_NOvKXQ7wFpLckCV6govo/view?usp=sharing" target="_blank" class="cert-link">
-        <i class="fa-solid fa-link"></i>
-      </a>
+    <li>Power BI Workshop | SKILL NATION 
+      <a href="https://drive.google.com/file/d/161F-iItIYxl_NOvKXQ7wFpLckCV6govo/view?usp=sharing" target="_blank" class="cert-link"><i class="fa-solid fa-link"></i></a>
     </li>
-
-    <li>
-      Web Development – Plasmid (2024)
-      <a href="https://drive.google.com/file/d/1YCwjByNAvRBoR1qQa9YfkaA1jIKjgNDK/view?usp=sharing" target="_blank" class="cert-link">
-        <i class="fa-solid fa-link"></i>
-      </a>
+    <li>Web Development – Plasmid (2024)
+      <a href="https://drive.google.com/file/d/1YCwjByNAvRBoR1qQa9YfkaA1jIKjgNDK/view?usp=sharing" target="_blank" class="cert-link"><i class="fa-solid fa-link"></i></a>
     </li>
   </ul>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:ramakanthgajula11@gmail.com">ramakanthgajula11@gmail.com</a></p>
+  <p>Email: <a href="mailto:ramakanthgajula11@gmail.com" >ramakanthgajula11@gmail.com</a></p>
   <p>GitHub: <a href="https://github.com/Gramakanth11" target="_blank">github.com/Gramakanth11</a></p>
   <p>LinkedIn: <a href="https://www.linkedin.com/in/ramakanth-gajula" target="_blank">linkedin.com/in/ramakanth-gajula</a></p>
 </section>
 
 <footer>
-  <p>© 2025 Ramakanth Gajula | Portfolio</p>
+  <p>© 2025 Ramakanth Gajula</p>
+  <div class="social-icons">
+    <a href="mailto:ramakanthgajula11@gmail.com" ><i class="fa-solid fa-envelope"></i></a>
+    <a href="https://github.com/Gramakanth11" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/ramakanth-gajula" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+  </div>
 </footer>
 
 <script>
@@ -367,8 +386,3 @@
 
 </body>
 </html>
-
-
-
-
-
